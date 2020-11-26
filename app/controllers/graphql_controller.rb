@@ -6,9 +6,9 @@ class GraphqlController < ApplicationController
     context = {
       post: Post.last
     }
-    result = WebtSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
-    render json: result
-  end
+    result = GraphqlAppSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
+      render json: result
+    end
 
   private
 
