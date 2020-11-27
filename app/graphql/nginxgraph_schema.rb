@@ -1,4 +1,4 @@
-class NginxgraphSchema < GraphQL::Schema
+NginxgraphSchema = GraphQL::Schema.define do
   mutation(Types::MutationType)
   query(Types::QueryType)
 end

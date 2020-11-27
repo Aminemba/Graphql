@@ -6,7 +6,7 @@ class GraphqlController < ApplicationController
     context = {
       post: Post.last
     }
-    result = GraphqlAppSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
+    result = NginxgraphSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
       render json: result
     end
 
